@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="myConnectionString-Web.config Connection String" description="myConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=ciforum.oracleapexservices.com )(PORT=1521))(CONNECT_DATA=(SID=xe)));User Id=sh2orange31;Password=0adW84npsh" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\TTU\\3\\IDU0412\\CI\\ciforum\\ciforum\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='myConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

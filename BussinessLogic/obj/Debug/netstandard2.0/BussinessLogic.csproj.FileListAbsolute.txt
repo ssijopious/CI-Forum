@@ -1,0 +1,14 @@
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\BussinessLogic.deps.json
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\BussinessLogic.dll
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\BussinessLogic.pdb
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\BussinessObject.dll
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\DataAccessLayer.dll
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\BussinessObject.pdb
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.csprojAssemblyReference.cache
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.csproj.CoreCompileInputs.cache
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.AssemblyInfoInputs.cache
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.AssemblyInfo.cs
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.csproj.CopyComplete
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.dll
+C:\TTU\3\IDU0412\CI\ciforum\BussinessLogic\obj\Debug\netstandard2.0\BussinessLogic.pdb

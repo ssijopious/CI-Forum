@@ -1,0 +1,9 @@
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\bin\Release\netstandard2.0\BussinessObject.deps.json
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\bin\Release\netstandard2.0\BussinessObject.dll
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\bin\Release\netstandard2.0\BussinessObject.pdb
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\obj\Release\netstandard2.0\BussinessObject.csproj.CoreCompileInputs.cache
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\obj\Release\netstandard2.0\BussinessObject.AssemblyInfoInputs.cache
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\obj\Release\netstandard2.0\BussinessObject.AssemblyInfo.cs
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\obj\Release\netstandard2.0\BussinessObject.dll
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\obj\Release\netstandard2.0\BussinessObject.pdb
+C:\TTU\3\IDU0412\CI\ciforum\BussinessObject\obj\Release\netstandard2.0\BussinessObject.csprojAssemblyReference.cache

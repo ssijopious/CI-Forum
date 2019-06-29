@@ -1,0 +1,386 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A497ACF-9EE5-4B25-885A-03BF4D2A884B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ciforum</RootNamespace>
+    <AssemblyName>ciforum</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.5.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.5.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="create-topic.aspx" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\fonts\font-awesome.min.css" />
+    <Content Include="css\fonts\fonts\mainfont.svg" />
+    <Content Include="css\fonts\icons\avatars\A.svg" />
+    <Content Include="css\fonts\icons\avatars\B.svg" />
+    <Content Include="css\fonts\icons\avatars\C.svg" />
+    <Content Include="css\fonts\icons\avatars\D.svg" />
+    <Content Include="css\fonts\icons\avatars\E.svg" />
+    <Content Include="css\fonts\icons\avatars\F.svg" />
+    <Content Include="css\fonts\icons\avatars\G.svg" />
+    <Content Include="css\fonts\icons\avatars\H.svg" />
+    <Content Include="css\fonts\icons\avatars\I.svg" />
+    <Content Include="css\fonts\icons\avatars\J.svg" />
+    <Content Include="css\fonts\icons\avatars\K.svg" />
+    <Content Include="css\fonts\icons\avatars\L.svg" />
+    <Content Include="css\fonts\icons\avatars\M.svg" />
+    <Content Include="css\fonts\icons\avatars\N.svg" />
+    <Content Include="css\fonts\icons\avatars\O.svg" />
+    <Content Include="css\fonts\icons\avatars\P.svg" />
+    <Content Include="css\fonts\icons\avatars\Q.svg" />
+    <Content Include="css\fonts\icons\avatars\R.svg" />
+    <Content Include="css\fonts\icons\avatars\S.svg" />
+    <Content Include="css\fonts\icons\avatars\T.svg" />
+    <Content Include="css\fonts\icons\avatars\U.svg" />
+    <Content Include="css\fonts\icons\avatars\V.svg" />
+    <Content Include="css\fonts\icons\avatars\W.svg" />
+    <Content Include="css\fonts\icons\avatars\X.svg" />
+    <Content Include="css\fonts\icons\avatars\Y.svg" />
+    <Content Include="css\fonts\icons\avatars\Z.svg" />
+    <Content Include="css\fonts\icons\badges\Advance.svg" />
+    <Content Include="css\fonts\icons\badges\Animal_Lover.svg" />
+    <Content Include="css\fonts\icons\badges\Bot.svg" />
+    <Content Include="css\fonts\icons\badges\Drink.svg" />
+    <Content Include="css\fonts\icons\badges\Favorite.svg" />
+    <Content Include="css\fonts\icons\badges\Gamer.svg" />
+    <Content Include="css\fonts\icons\badges\Great_Post.svg" />
+    <Content Include="css\fonts\icons\badges\Intermediate.svg" />
+    <Content Include="css\fonts\icons\badges\I_Wrote_This.svg" />
+    <Content Include="css\fonts\icons\badges\Lets_talk.svg" />
+    <Content Include="css\fonts\icons\badges\Messenger.svg" />
+    <Content Include="css\fonts\icons\badges\Milk.svg" />
+    <Content Include="css\fonts\icons\badges\Newbie.svg" />
+    <Content Include="css\fonts\icons\badges\Viral_Video.svg" />
+    <Content Include="css\fonts\icons\main\Achive.svg" />
+    <Content Include="css\fonts\icons\main\Activity.svg" />
+    <Content Include="css\fonts\icons\main\Add.svg" />
+    <Content Include="css\fonts\icons\main\Add_User.svg" />
+    <Content Include="css\fonts\icons\main\Advanced_Search.svg" />
+    <Content Include="css\fonts\icons\main\Already_Bookmarked.svg" />
+    <Content Include="css\fonts\icons\main\Arrow_Below.svg" />
+    <Content Include="css\fonts\icons\main\Arrow_Down.svg" />
+    <Content Include="css\fonts\icons\main\Arrow_Left.svg" />
+    <Content Include="css\fonts\icons\main\Arrow_Right.svg" />
+    <Content Include="css\fonts\icons\main\Arrow_Up.svg" />
+    <Content Include="css\fonts\icons\main\Arrow_Up2.svg" />
+    <Content Include="css\fonts\icons\main\Badge.svg" />
+    <Content Include="css\fonts\icons\main\Blocked.svg" />
+    <Content Include="css\fonts\icons\main\BlockQuote.svg" />
+    <Content Include="css\fonts\icons\main\Bold.svg" />
+    <Content Include="css\fonts\icons\main\Bookmark.svg" />
+    <Content Include="css\fonts\icons\main\Bullet_List.svg" />
+    <Content Include="css\fonts\icons\main\Calender.svg" />
+    <Content Include="css\fonts\icons\main\Cancel.svg" />
+    <Content Include="css\fonts\icons\main\Color_Picker.svg" />
+    <Content Include="css\fonts\icons\main\Copy.svg" />
+    <Content Include="css\fonts\icons\main\Download.svg" />
+    <Content Include="css\fonts\icons\main\Downvote.svg" />
+    <Content Include="css\fonts\icons\main\Email.svg" />
+    <Content Include="css\fonts\icons\main\Emoticon.svg" />
+    <Content Include="css\fonts\icons\main\Favorite_Topic.svg" />
+    <Content Include="css\fonts\icons\main\Flag_Topic.svg" />
+    <Content Include="css\fonts\icons\main\Group.svg" />
+    <Content Include="css\fonts\icons\main\heading.svg" />
+    <Content Include="css\fonts\icons\main\Horizontal_Line.svg" />
+    <Content Include="css\fonts\icons\main\Info.svg" />
+    <Content Include="css\fonts\icons\main\Italic.svg" />
+    <Content Include="css\fonts\icons\main\Locked.svg" />
+    <Content Include="css\fonts\icons\main\Login_signup.svg" />
+    <Content Include="css\fonts\icons\main\Logout.svg" />
+    <Content Include="css\fonts\icons\main\Logo_Forum.svg" />
+    <Content Include="css\fonts\icons\main\Menu_Icon.svg" />
+    <Content Include="css\fonts\icons\main\Message.svg" />
+    <Content Include="css\fonts\icons\main\More_Options.svg" />
+    <Content Include="css\fonts\icons\main\Muted.svg" />
+    <Content Include="css\fonts\icons\main\New_Topic.svg" />
+    <Content Include="css\fonts\icons\main\Notification.svg" />
+    <Content Include="css\fonts\icons\main\Pencil.svg" />
+    <Content Include="css\fonts\icons\main\Performatted.svg" />
+    <Content Include="css\fonts\icons\main\Pinned.svg" />
+    <Content Include="css\fonts\icons\main\Preferences.svg" />
+    <Content Include="css\fonts\icons\main\Quote.svg" />
+    <Content Include="css\fonts\icons\main\Reply_Empty.svg" />
+    <Content Include="css\fonts\icons\main\Reply_Fill.svg" />
+    <Content Include="css\fonts\icons\main\Search.svg" />
+    <Content Include="css\fonts\icons\main\Settings.svg" />
+    <Content Include="css\fonts\icons\main\Share_Topic.svg" />
+    <Content Include="css\fonts\icons\main\Support %281%29.svg" />
+    <Content Include="css\fonts\icons\main\Support.svg" />
+    <Content Include="css\fonts\icons\main\Track.svg" />
+    <Content Include="css\fonts\icons\main\Tracking.svg" />
+    <Content Include="css\fonts\icons\main\Upload_Files.svg" />
+    <Content Include="css\fonts\icons\main\Upvote.svg" />
+    <Content Include="css\fonts\icons\main\User.svg" />
+    <Content Include="css\fonts\icons\main\Verified.svg" />
+    <Content Include="css\fonts\icons\main\Watching.svg" />
+    <Content Include="css\fonts\icons\main\Watch_Later.svg" />
+    <Content Include="css\fonts\style.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\util.css" />
+    <Content Include="dashboard.aspx" />
+    <Content Include="images\signup-bg.png" />
+    <Content Include="images\topic-bg-gradient.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="jquery\app.js" />
+    <Content Include="jquery\ciforum.js" />
+    <Content Include="jquery\jquery.min.js" />
+    <Content Include="jquery\velocity.min.js" />
+    <Content Include="login.aspx" />
+    <Content Include="signup.aspx" />
+    <Content Include="single-topic.aspx" />
+    <Content Include="users.aspx" />
+    <Content Include="vendor\bootstrap\v3\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\v4\bootstrap-grid.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="create-topic.aspx.cs">
+      <DependentUpon>create-topic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="create-topic.aspx.designer.cs">
+      <DependentUpon>create-topic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="single-topic.aspx.cs">
+      <DependentUpon>single-topic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="single-topic.aspx.designer.cs">
+      <DependentUpon>single-topic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="css\fonts\FontAwesome.otf" />
+    <Content Include="css\fonts\fonts\mainfont.ttf" />
+    <Content Include="css\fonts\fonts\mainfont.woff" />
+    <Content Include="master.Master" />
+    <Content Include="Handler1.ashx" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\ciforum20190504014653 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinessLogic\BussinessLogic.csproj">
+      <Project>{eb89e642-d41d-443b-8df8-0c1661a01e23}</Project>
+      <Name>BussinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BussinessObject\BussinessObject.csproj">
+      <Project>{ddffacb0-6817-4d17-970a-21571213d40e}</Project>
+      <Name>BussinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{f2f58c68-9a84-4160-bd87-d7a6a25f5c75}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56582</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56582/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

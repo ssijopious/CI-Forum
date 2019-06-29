@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="ciforum.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CI Forum</title>
+    <link rel="shortcut icon" href="img/fav.ico" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet" />
+    <link href="../css/fonts/style.css" rel="stylesheet" />
+    <link href="../css/fonts/font-awesome.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap/v3/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendor/bootstrap/v4/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header js-header js-dropdown">
+            <div class="container">
+                <div class="header__logo">
+                    <h1>
+                        <img src="css/fonts/icons/main/Logo_Forum.svg" alt="logo">
+                    </h1>
+                    <div class="header__logo-btn" data-dropdown-btn="logo">
+                        CI-Forum<i class="icon-Arrow_Below"></i>
+                    </div>
+                    <nav class="dropdown dropdown--design-01" data-dropdown-list="logo">
+                        <ul class="dropdown__catalog">
+                            <li><a href="index.aspx">Home Page</a></li>
+                            <%--<li><a href="single-topic.aspx">Single Topic Page</a></li>
+                            <li><a href="signup.aspx">Sign up Page</a></li>--%>
+                            <li><a href="create-topic.aspx">Create Topic Page</a></li>
+                            <li><a href="users.aspx">Users</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__search ">
+                    <div class="forms hidden" id="divheadersearch">
+                        <label>
+                            <i class="icon-Search js-header-search-btn-open" onclick="getposts('0');"></i>
+                            <input type="search" id="txtsearchpost" placeholder="Search all forums" class="form-control" onkeyup="serchpost('txtsearchpost');">
+                        </label>
+                    </div>
+                    <div class="header__search-close js-header-search-btn-close"><i class="icon-Cancel"></i></div>
+
+                </div>
+                <div class="header__menu hidden" id="divheadermenu">
+                    <div class="header__menu-btn" data-dropdown-btn="menu">
+                        Posts<i class="icon-Menu_Icon"></i>
+                    </div>
+                    <nav class="dropdown dropdown--design-01" data-dropdown-list="menu">
+                        <div>
+                            <ul class="dropdown__catalog row">
+                                <li class="col-xs-6" onclick="getposts('0');"><a href="#">Latest</a></li>
+                                <li class="col-xs-6" onclick="getposts('1');"><a href="#">Most Viewed</a></li>
+                                <li class="col-xs-6" onclick="getposts('2');"><a href="#">Most Commented</a></li>
+                                <li class="col-xs-6" onclick="getposts('3');"><a href="#">Most Favorite</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Categories</h3>
+                            <input class="form-control" placeholder="Categories" id="txttag" onkeyup="serchtag('txttag,tagSearchulmaster,0');">
+                            <label class="hidden" id="lblhtxttag">0</label>
+                            <ul class="ul_Advancelist hidden" id="tagSearchulmaster">
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+
+                <div class="header__user">
+                    <div class="header__user-btn" id="divuser" data-dropdown-btn="user">
+                    </div>
+
+                    <nav class="dropdown dropdown--design-01" data-dropdown-list="user">
+                        <div>
+                            <div class="dropdown__icons">
+                                <a href="dashboard.aspx" class="tooltips"><i class="fa fa-dashboard"></i><span class="tooltiptext">Dashboard</span></a>
+                                <a href="login.aspx" class="tooltips"><i class="icon-Logout"></i><span class="tooltiptext">Logout</span></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <asp:ScriptManager ID="scrptScriptManager" runat="server" CompositeScript-ScriptMode="Auto"
+                    LoadScriptsBeforeUI="true" EnablePageMethods="true">
+                   <%-- <CompositeScript>
+                        <Scripts>
+                            <asp:ScriptReference Path="~/jquery/jquery.min.js" ScriptMode="Auto" />
+                            <asp:ScriptReference Path="~/jquery/velocity.min.js" ScriptMode="Auto" />
+                            <asp:ScriptReference Path="~/jquery/app.js" ScriptMode="Auto" />
+                            <asp:ScriptReference Path="~/jquery/ciforum.js" ScriptMode="Auto" />
+                            <asp:ScriptReference Path="~/jquery/bootstrap.min.js" ScriptMode="Auto" />
+                        </Scripts>
+                    </CompositeScript>--%>
+                </asp:ScriptManager>
+            </form>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer js-dropdown">
+            <div class="container">
+                <div class="footer__logo">
+                    <div>
+                        <img src="css/fonts/icons/main/Logo_Forum.svg" alt="logo">CI-Forum
+                    </div>
+                </div>
+                <div class="footer__nav">
+                    <div class="footer__bline">
+                        <ul class="footer__menu">
+                            <li class="footer__copyright"><span>&copy; 2019 CI-Forum</span></li>
+                            <li><a href="#">Teams</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                        <ul class="footer__social">
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cloud" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="col-lg-12 hover hidden" id="divhover">
+        <div class="hoverdiv" style="">
+            <div class="loader"></div>
+        </div>
+    </div>   
+
+</body>
+</html>
